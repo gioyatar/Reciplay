@@ -1,0 +1,498 @@
+:root {
+  --getStartedBTN-Border: url("../../images/borderPixels/borderPixel14.svg");
+  --getStartedBTN-Main: rgb(231, 111, 81);
+  --getStartedBTN-Shadow: rgb(183, 45, 64);
+  --getStartedBTN-Press: rgb(215, 86, 68);
+
+  --checkBTN-Border: url("../../images/borderPixels/borderPixel14.svg");
+  --checkBTN-Main: rgb(231, 111, 81);
+  --checkBTN-Shadow: rgb(224, 69, 31);
+  --checkBTN-Press: rgb(224, 69, 31);
+
+  --unknownBTN-Border: url("../../images/borderPixels/borderPixel10.svg");
+  --unknownBTN-Main: rgb(45, 71, 57);
+  --unknownBTN-Shadow: rgb(73, 106, 93);
+  --unknownBTN-Press: rgb(73, 106, 93);
+
+  --courseDiv-Border: url("../../images/borderPixels/borderPixel13.svg") 3 / 6px / 0px stretch;
+}
+
+body {
+  background-color: #315742;
+  margin: 0;
+  cursor: url('../../images/knifeCursor.png'), auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.normalBTN {
+  height: 40px;
+  width: 125px;
+  background-color: #E76F51;
+  color: black;
+  font-family: 'PixelGridS', sans-serif;
+}
+
+/* Top Section */
+#topSect {
+  padding: 50px 20px;
+}
+
+.contentRow {
+  display: flex;
+  align-items: center;       /* vertically center them */
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.textSection {
+  margin-top: 2%;
+  margin-left: 5%;
+  flex: 1;
+}
+
+.difficultyContainer {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 8px;
+    font-family: Mulish, sans-serif;
+}
+
+.difficultyContainer span {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.68px;
+    text-transform: uppercase;
+}
+
+.difficultyTag {
+  display: flex;
+  height: 25px;
+  padding: 1px 12px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  border: 1.7px solid rgb(203, 213, 225);;
+  border-radius: 20px;
+}
+
+.difficultyTag p { 
+  color: rgb(203, 213, 225);
+  font-size: 10px;
+  font-family: Mulish, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1.68px;
+  text-transform: uppercase
+}
+
+.normalParag {
+  max-width: 630px;
+  color: #EDE0B4;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 4.375px 4.375px;
+  font-family: 'Mulish', sans-serif;
+}
+
+#subHead {
+  margin-bottom: -30px;
+  color: whitesmoke;
+  font-family: 'PixelGridM';
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3.4px;
+}
+
+#mainHeading {
+  margin-bottom: 5px;
+  color: rgb(231, 111, 81);
+  text-shadow: rgb(145, 110, 101) 4px 4px 0px;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+}
+
+.pixelBTN {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  transform-style: preserve-3d;
+  overflow: visible;
+  margin-top: 5px; /* Move up by 8px */
+  margin-left: -6px; /* Keep or adjust as needed */
+  margin-right: -6px;
+  margin-bottom: -6px;
+}
+
+.pixelBTN span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pixelBTN .before {
+  height: calc(100% - 4px);
+  background: var(--getStartedBTN-Main);
+  border-image: var(--getStartedBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 1;
+  transition: transform 0.1s, background 0.1s;
+}
+
+.pixelBTN .btn-content {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  color: black;
+  font-family: 'PixelGridS', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-shadow: var(--getStartedBTN-Press) 0px 2px 0px;
+  padding: 12px 50px 17px 50px;
+  transition: transform 0.1s;
+}
+
+.pixelBTN .after {
+  height: calc(100% - 6px);
+  top: 6px;
+  background: var(--getStartedBTN-Shadow);
+  border-image: var(--getStartedBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 0;
+}
+
+.pixelBTN:hover .before {
+  background: rgb(234, 131, 121);
+  transform: translateY(-2px);
+}
+
+.pixelBTN:hover .btn-content {
+  transform: translateY(-2px);
+}
+
+.pixelBTN:active .before {
+  transform: translateY(2px);
+  background: var(--getStartedBTN-Press);
+}
+
+.pixelBTN:active .btn-content {
+  transform: translateY(2px);
+}
+
+/* Hero Section */
+#heroSect {
+  background-color: #3F6844;
+  padding: 50px 20px;
+}
+
+.components {
+    display: grid;
+}
+
+.courseChapterContainer {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    border-image: url("../../images/borderPixels/borderPixel13.svg") 3 / 6px / 0px stretch;
+    border-style: solid;
+    border-width: 0px;
+    position: relative;
+    clip-path: polygon(6px 0px, 6px 2px, 4px 2px, 4px 4px, 2px 4px, 2px 6px, 0px 6px, 0px 8px, 0px calc(100% - 6px), 2px calc(100% - 6px), 2px calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 2px), 6px calc(100% - 2px), 6px calc(100% + 0px), 8px calc(100% + 0px), calc(100% - 6px) calc(100% + 0px), calc(100% - 6px) calc(100% - 2px), calc(100% - 4px) calc(100% - 2px), calc(100% - 4px) calc(100% - 4px), calc(100% - 2px) calc(100% - 4px), calc(100% - 2px) calc(100% - 6px), calc(100% + 0px) calc(100% - 6px), calc(100% + 0px) calc(100% - 8px), calc(100% + 0px) 6px, calc(100% - 2px) 6px, calc(100% - 2px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 2px, calc(100% - 6px) 2px, calc(100% - 6px) 0px, calc(100% - 8px) 0px);
+}
+
+.line {
+    transform: translateY(10px);
+    width: 3px;
+    height: calc(100% - 53px);
+    position: absolute;
+    top: 26px;
+    left: 47px;
+    z-index: 1;
+}
+
+.step .infos .elements {
+    color: #E76F51;
+    font-family: 'Mulish', sans-serif;
+}
+
+.step .topHeader .title {
+    color: #E9C46A;
+    font-family: PixelGridS;
+}
+
+.topHeader svg .dont-highlight {
+    fill: #E9C46A;
+    font-family: PixelGridS;
+}
+
+.step .topHeader {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 32px;
+    padding: 8px;
+    border-radius: 4px;
+    transition-duration: 0.2s;
+}
+
+.step .infos {
+    margin-top: 16px;
+    margin-left: 80px;
+    margin-right: 30px;
+    display: grid;
+}
+
+.step .infos .elements {
+    padding: 24px;
+    background: rgb(45, 71, 57);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.equip_Ingri_List {
+    display: flex;
+    flex-direction: column;
+}
+
+.format {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.textContainer {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.textNum {
+    width: 140px;
+    flex-shrink: 0;
+}
+
+.textNum p {
+    color: #EDE0B4;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.textName p {
+    color: #E9C46A;
+    font-family: Mulish, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.checkBTN {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transform-style: preserve-3d;
+    overflow: visible;
+    margin-top: 5px; /* Move up by 8px */
+    margin-left: -6px; /* Keep or adjust as needed */
+    margin-right: -6px;
+}
+
+.checkBTN span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.checkBTN .before {
+  height: calc(100% - 4px);
+  background: var(--checkBTN-Main);
+  border-image: var(--checkBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 1;
+  transition: transform 0.1s, background 0.1s;
+}
+
+.checkBTN .btn-content {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  color: #E9C46A;
+  font-family: 'PixelGridS', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-shadow: var(--checkBTN-Press) 0px 2px 0px;
+  padding: 12px 30px 0px 30px;
+  transition: transform 0.1s;
+}
+
+.checkBTN .btn-content svg {
+    transform: translateY(-4px);
+    vertical-align: middle;    
+    filter: drop-shadow(var(--checkBTN-Press) 0px 2px 0px);     
+}
+
+.checkBTN .after {
+  height: calc(100% - 6px);
+  top: 6px;
+  background: var(--checkBTN-Shadow);
+  border-image: var(--checkBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 0;
+}
+
+.checkBTN:hover .before {
+  background: rgb(234, 131, 121);
+  transform: translateY(-2px);
+}
+
+.checkBTN:hover .btn-content {
+  transform: translateY(-2px);
+}
+
+.checkBTN:active .before {
+  transform: translateY(2px);
+  background: var(--checkBTN-Press);
+}
+
+.checkBTN:active .btn-content {
+  transform: translateY(2px);
+}
+
+.unknownBTN {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+    transform-style: preserve-3d;
+    overflow: visible;
+    margin-top: 5px; /* Move up by 8px */
+    margin-left: -6px; /* Keep or adjust as needed */
+    margin-right: -6px;
+}
+
+.unknownBTN span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.unknownBTN .before {
+  height: calc(100% - 4px);
+  background: var(--unknownBTN-Main);
+  border-image: var(--unknownBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 1;
+  transition: transform 0.1s, background 0.1s;
+}
+
+.unknownBTN .btn-content {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-family: 'PixelGridS', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-shadow: var(--unknownBTN-Press) 0px 2px 0px;
+  padding: 12px 54.5px 0px 54.5px;
+  transition: transform 0.1s;
+}
+
+.unknownBTN .btn-content svg {
+    transform: translateY(-4px);
+    vertical-align: middle;    
+    filter: drop-shadow(var(--unknownBTN-Press) 0px 2px 0px);     
+}
+
+.unknownBTN .after {
+  height: calc(100% - 6px);
+  top: 6px;
+  background: var(--unknownBTN-Shadow);
+  border-image: var(--unknownBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 0;
+}
+
+.rightComponent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.rightComponent .userSection {
+    padding: 24px;
+    border-image: url("../../images/borderPixels/borderPixel13.svg") 3 / 6px / 0px stretch;
+    border-style: solid;
+    border-width: 0px;
+    position: relative;
+    clip-path: polygon(6px 0px, 6px 2px, 4px 2px, 4px 4px, 2px 4px, 2px 6px, 0px 6px, 0px 8px, 0px calc(100% - 6px), 2px calc(100% - 6px), 2px calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 2px), 6px calc(100% - 2px), 6px calc(100% + 0px), 8px calc(100% + 0px), calc(100% - 6px) calc(100% + 0px), calc(100% - 6px) calc(100% - 2px), calc(100% - 4px) calc(100% - 2px), calc(100% - 4px) calc(100% - 4px), calc(100% - 2px) calc(100% - 4px), calc(100% - 2px) calc(100% - 6px), calc(100% + 0px) calc(100% - 6px), calc(100% + 0px) calc(100% - 8px), calc(100% + 0px) 6px, calc(100% - 2px) 6px, calc(100% - 2px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 2px, calc(100% - 6px) 2px, calc(100% - 6px) 0px, calc(100% - 8px) 0px);
+}
+
+.userSection .userInfo {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.userSection .userInfo img {
+    width: 56px;
+    height: 56px;
+}
+
+.userSection .userInfo .username {
+    color: rgb(248, 250, 252);
+    font-family: Mulish, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.userSection .userInfo .rank {
+    color: rgb(248, 250, 252);
+    font-family: Mulish, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}

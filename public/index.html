@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/images/logos/logo.png">
+    <title>Reciplay | Level Up Your Cooking Skills ⋆˙⟡</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <!-- Press Start 2P Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Mulish Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="../assets/css/customFonts.css">
+</head>
+<body>
+    <div id="headerPlaceholder"></div>
+
+    <div id="topSect">
+        <div class="contentRow">
+            <div class="textSection">
+                <h2 id="subHead">Level up your</h2>
+                <h1 id="mainHeading"></h1>
+                <p class="normalParag">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis natus autem fuga rerum. Maxime labore placeat dolorem eius mollitia, quibusdam sunt in optio, ratione eligendi praesentium at, distinctio consequatur sequi.</p>
+                <div class="pixelBTN" style="width: fit-content;">
+                    <span class="before"></span>
+                    <span class="btn-content">Get started</span>
+                    <span class="after"></span>
+                </div>
+            </div>
+            <div class="imageSection">
+                <img src="../assets/images/topSect.gif" alt="🧑‍🍳">
+            </div>
+        </div>
+    </div>
+
+    <div id="heroSect">
+        <div id="courseTitle">
+            <h2 id="heroHead">Enter the Cooking Realm</h2>
+            <p id="heroPara">Master recipes, collect achievements, and discover your ultimate chef form.</p>
+        </div>
+
+        <div id="tags">
+            <div onclick="showCategory('appetizer')" class="courseTag">Appetizers</div>
+            <div onclick="showCategory('main')" class="courseTag">Main</div>
+            <div onclick="showCategory('dessert')" class="courseTag">Desserts</div>
+        </div>
+        
+        <div id="coursesList"></div>
+    </div>
+
+    <script src="../assets/js/include.js"></script>
+    <script src="../assets/js/home.js"></script>
+</body>
+</html>

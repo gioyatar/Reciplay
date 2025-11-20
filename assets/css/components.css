@@ -1,0 +1,127 @@
+:root {
+  --signUpBTN-Border: url("../images/borderPixels/borderPixel14.svg");
+  --signUpBTN-Main: rgb(231, 111, 81);
+  --signUpBTN-Shadow: rgb(183, 45, 64);
+  --signUpBTN-Press: rgb(215, 86, 68);
+}
+
+/* Header */
+
+header {
+  background-color: #2D4739;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px 15px 30px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+#siteName {
+  color: #E9C46A;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 21px;
+}
+
+#siteName:hover {
+  color: #F4A261;
+  transition: color 0.3s;
+}
+
+.headerLinks {
+  font-family: 'Mulish', sans-serif;
+  color: #E9C46A;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+.headerLinks:hover {
+  transition: background-color 0.4s;
+  background-color: #3E5C47;
+  color: #F4A261;
+  border-radius: 8px;
+}
+
+/* Pixelated Button */
+.signUpBTN {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  transform-style: preserve-3d;
+  overflow: visible;
+  margin-top: -10px; /* Move up by 8px */
+  margin-left: 750px; /* Keep or adjust as needed */
+  margin-right: -6px;
+  margin-bottom: -6px;
+}
+
+.signUpBTN span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signUpBTN .before {
+  height: calc(100% - 4px);
+  background: var(--signUpBTN-Main);
+  border-image: var(--signUpBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 1;
+  transition: transform 0.1s, background 0.1s;
+}
+
+/* Button text */
+.signUpBTN .btn-content {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  color: black;
+  font-family: 'PixelGridS', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-shadow: var(--signUpBTN-Press) 0px 2px 0px;
+  padding: 8px 16px 13px 16px;
+  transition: transform 0.1s;
+}
+
+.signUpBTN .after {
+  height: calc(100% - 6px);
+  top: 6px;
+  background: var(--signUpBTN-Shadow);
+  border-image: var(--signUpBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 0;
+}
+
+.signUpBTN:hover .before {
+  background: rgb(234, 131, 121);
+  transform: translateY(-1.5px);
+}
+
+.signUpBTN:hover .btn-content {
+  transform: translateY(-2px);
+}
+
+.signUpBTN:active .before {
+  transform: translateY(2px);
+  background: var(--signUpBTN-Press);
+}
+
+.signUpBTN:active .btn-content {
+  transform: translateY(2px);
+}

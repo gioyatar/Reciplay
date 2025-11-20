@@ -1,0 +1,341 @@
+:root {
+  --getStartedBTN-Border: url("../images/borderPixels/borderPixel14.svg");
+  --getStartedBTN-Main: rgb(231, 111, 81);
+  --getStartedBTN-Shadow: rgb(183, 45, 64);
+  --getStartedBTN-Press: rgb(215, 86, 68);
+
+  --courseDiv-Border: url("../images/borderPixels/borderPixel13.svg") 3 / 6px / 0px stretch;
+}
+
+body {
+  background-color: #315742;
+  margin: 0;
+  cursor: url('../images/knifeCursor.png'), auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.normalBTN {
+  height: 40px;
+  width: 125px;
+  background-color: #E76F51;
+  color: black;
+  font-family: 'PixelGridS', sans-serif;
+}
+
+/* Top Section */
+#topSect {
+  padding: 50px 20px;
+}
+
+.contentRow {
+  display: flex;
+  align-items: center;       /* vertically center them */
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.textSection {
+  margin-left: 2.5%;
+  flex: 1;
+}
+
+.imageSection img {
+  transform: translateX(-30px);
+  margin: -50px 0 0 -50px;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+
+.normalParag {
+  max-width: 630px;
+  color: #EDE0B4;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 4.375px 4.375px;
+  font-family: 'Mulish', sans-serif;
+}
+
+#subHead {
+  margin-bottom: -30px;
+  color: whitesmoke;
+  font-family: 'PixelGridM';
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3.4px;
+}
+
+#mainHeading {
+  margin-bottom: 5px;
+  color: rgb(231, 111, 81);
+  text-shadow: rgb(145, 110, 101) 4px 4px 0px;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3.4px;
+}
+
+.pixelBTN {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  transform-style: preserve-3d;
+  overflow: visible;
+  margin-top: 5px; /* Move up by 8px */
+  margin-left: -6px; /* Keep or adjust as needed */
+  margin-right: -6px;
+  margin-bottom: -6px;
+}
+
+.pixelBTN span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pixelBTN .before {
+  height: calc(100% - 4px);
+  background: var(--getStartedBTN-Main);
+  border-image: var(--getStartedBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 1;
+  transition: transform 0.1s, background 0.1s;
+}
+
+.pixelBTN .btn-content {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  color: black;
+  font-family: 'PixelGridS', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-shadow: var(--getStartedBTN-Press) 0px 2px 0px;
+  padding: 12px 50px 17px 50px;
+  transition: transform 0.1s;
+}
+
+.pixelBTN .after {
+  height: calc(100% - 6px);
+  top: 6px;
+  background: var(--getStartedBTN-Shadow);
+  border-image: var(--getStartedBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 0;
+}
+
+.pixelBTN:hover .before {
+  background: rgb(234, 131, 121);
+  transform: translateY(-2px);
+}
+
+.pixelBTN:hover .btn-content {
+  transform: translateY(-2px);
+}
+
+.pixelBTN:active .before {
+  transform: translateY(2px);
+  background: var(--getStartedBTN-Press);
+}
+
+.pixelBTN:active .btn-content {
+  transform: translateY(2px);
+}
+
+/* Hero Section */
+#heroSect {
+  background-color: #3F6844;
+  padding: 50px 20px;
+}
+
+#courseTitle {
+  padding-left: 350px;
+}
+
+#heroHead {
+  color: #E76F51;
+  font-family: 'PixelGridM';
+  font-size: 28px;
+  padding-left: 75px;
+}
+
+#heroPara {
+  color: #EDE0B4;
+  font-family: 'Mulish', sans-serif;
+  padding: 15px 25px;
+}
+
+#tags {
+  display: flex;
+  gap: 7px;
+  font-family: 'Mulish', sans-serif;
+  padding: 10px 475px;
+  margin-bottom: 35px;
+}
+
+.courseTag {
+  background-color: #2D4739;
+  color: #E9C46A;
+  border: 2px solid #F4A261;
+  border-radius: 200px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.courseTag:hover {
+  background-color: #E76F51;
+  color: #FFF4D2;
+}
+
+#coursesList {
+  display: grid;
+  grid-template-columns: repeat(3, 333px);
+  gap: 32px 10px;
+  justify-content: center;
+}
+
+/* 
+
+"Sa Course Card to wag kalikutin tangina mahirap ayusin to naka ilang AI ako para maayos lang haha." 
+- Boss Gio
+
+*/
+
+.pixelBorder {
+  border-image: var(--courseDiv-Border);
+  border-style: solid;
+  border-width: 0px;
+  position: relative;
+  clip-path: polygon(
+    6px 0px, 6px 2px, 4px 2px, 4px 4px, 2px 4px, 2px 6px, 
+    0px 6px, 0px 8px, 0px calc(100% - 6px), 2px calc(100% - 6px), 
+    2px calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 2px), 
+    6px calc(100% - 2px), 6px calc(100% + 0px), 8px calc(100% + 0px), 
+    calc(100% - 6px) calc(100% + 0px), calc(100% - 6px) calc(100% - 2px), 
+    calc(100% - 4px) calc(100% - 2px), calc(100% - 4px) calc(100% - 4px), 
+    calc(100% - 2px) calc(100% - 4px), calc(100% - 2px) calc(100% - 6px), 
+    calc(100% + 0px) calc(100% - 6px), calc(100% + 0px) calc(100% - 8px), 
+    calc(100% + 0px) 6px, calc(100% - 2px) 6px, calc(100% - 2px) 4px, 
+    calc(100% - 4px) 4px, calc(100% - 4px) 2px, calc(100% - 6px) 2px, 
+    calc(100% - 6px) 0px, calc(100% - 8px) 0px
+  );
+}
+
+.courseCard a {
+  display: inline-block;
+}
+
+.bottomCard {
+  width: 98.5%;
+  background-color: rgb(73, 106, 93);
+  height: 310px;
+  position: relative;
+}
+
+.pixelBorder .topCard {
+  height: 304px;
+  background-color: rgb(45, 71, 57);
+  overflow: hidden;
+}
+
+.pixelBorder .topCard:hover {
+  transition: color 0.4s;
+  background-color: rgb(55, 81, 67);
+  overflow: hidden;
+}
+
+.pixelBorder .topCard .courseCardIMG {
+  height: 120px;
+  margin: 2px 2px -10px 2px;
+}
+
+.pixelBorder .topCard .courseCardIMG img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(
+    4px 0px, 4px 2px, 2px 2px, 
+    2px 4px, 0px 4px, 0px 100%, 
+    100% 100%, 100% calc(100% - 4px), 
+    100% calc(100% - 4px), 100% 4px, 
+    calc(100% - 2px) 4px, calc(100% - 2px) 
+    2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px
+  );
+}
+
+.pixelBorder .topCard .courseCardTexts {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pixelBorder .topCard .courseCardTexts .courseNum {
+  color: rgb(148, 163, 184);
+  font-family: Mulish, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.68px;
+  text-transform: uppercase;
+}
+
+.pixelBorder .topCard .courseCardTexts .courseCardTitle {
+  color: rgb(255, 255, 255);
+  font-family: Mulish, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: -10px 0px -15px 0px;
+}
+
+.pixelBorder .topCard .courseCardTexts .courseCardDesc {
+  color: rgb(203, 213, 225);
+  font-family: Mulish, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.pixelBorder .topCard .courseCardDifficulty {
+  margin: -10px 0px 10px -10px;
+  padding: 0px 18px;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.pixelBorder .topCard .courseCardDifficulty .difficultyTab {
+  display: flex;
+  height: 25px;
+  padding: 5px 12px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+
+.pixelBorder .topCard .courseCardDifficulty .difficultyTab p {
+  color: #E9C46A;
+  font-family: 'PixelGridS';
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.68px;
+  text-transform: uppercase;
+}

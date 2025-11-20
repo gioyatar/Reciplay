@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'PixelGridS';
+  src: url('../fonts/pixelgrid-squarebolds.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelGridM';
+  src: url('../fonts/pixelgrid-squareboldm.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelGridXL';
+  src: url('../fonts/pixelgrid-squareboldxl.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}

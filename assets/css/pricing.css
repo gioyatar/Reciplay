@@ -1,0 +1,429 @@
+:root {
+  --getStartedBTN-Border: url("../images/borderPixels/borderPixel10.svg");
+  --getStartedBTN-Main: rgb(45, 71, 57);
+  --getStartedBTN-Shadow: rgb(73, 106, 93);
+  --getStartedBTN-Press: rgb(73, 106, 93);
+
+  --paidBTN-Border: url("../images/borderPixels/borderPixel14.svg");
+  --paidBTN-Main: rgb(231, 111, 81);
+  --paidBTN-Shadow: rgb(224, 69, 31);
+  --paidBTN-Press: rgb(224, 69, 31);
+
+  --tierDiv-Border: url("../images/borderPixels/borderPixel6.svg") 3 / 6px / 0px stretch;
+  --paidTierDiv-Border: url("../images/borderPixels/borderPixel13.svg") 3 / 6px / 0px stretch;
+}
+
+body {
+  background-color: #315742;
+  margin: 0;
+  cursor: url('../images/knifeCursor.png'), auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.normalBTN {
+  height: 40px;
+  width: 125px;
+  background-color: #E76F51;
+  color: black;
+  font-family: 'PixelGridS', sans-serif;
+}
+
+.rainbowHighlight {
+  background: linear-gradient(255deg, rgb(163, 230, 53) 8%, rgb(44, 186, 255) 43%, rgb(190, 83, 255) 78%, rgb(255, 114, 134) 114%) text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Top Section */
+.textSection {
+  margin-top: 40px;
+}
+
+.textSection h2 {
+  text-align: center;
+  margin: 0px;
+  color: rgb(248, 250, 252);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.96px;
+  font-family: PixelGridM;
+}
+
+.textSection p {
+  text-align: center;
+  font-family: Mulish, sans-serif;
+  color: rgb(203, 213, 225);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.tierList {
+  display: grid;
+  grid-template-columns: repeat(2, 333px);
+  gap: 32px 10px;
+  justify-content: center;
+}
+
+.pixelBorder {
+  border-image: var(--tierDiv-Border);
+  border-style: solid;
+  border-width: 0px;
+  position: relative;
+  clip-path: polygon(
+    6px 0px, 6px 2px, 4px 2px, 4px 4px, 2px 4px, 2px 6px, 
+    0px 6px, 0px 8px, 0px calc(100% - 6px), 2px calc(100% - 6px), 
+    2px calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 2px), 
+    6px calc(100% - 2px), 6px calc(100% + 0px), 8px calc(100% + 0px), 
+    calc(100% - 6px) calc(100% + 0px), calc(100% - 6px) calc(100% - 2px), 
+    calc(100% - 4px) calc(100% - 2px), calc(100% - 4px) calc(100% - 4px), 
+    calc(100% - 2px) calc(100% - 4px), calc(100% - 2px) calc(100% - 6px), 
+    calc(100% + 0px) calc(100% - 6px), calc(100% + 0px) calc(100% - 8px), 
+    calc(100% + 0px) 6px, calc(100% - 2px) 6px, calc(100% - 2px) 4px, 
+    calc(100% - 4px) 4px, calc(100% - 4px) 2px, calc(100% - 6px) 2px, 
+    calc(100% - 6px) 0px, calc(100% - 8px) 0px
+  );
+}
+
+.courseCard a {
+  display: inline-block;
+}
+
+.bottomCard {
+  width: 98.5%;
+  background-color: rgb(73, 106, 93);
+  height: 310px;
+  position: relative;
+}
+
+.pixelBorder .topCard {
+  height: 304px;
+  background-color: rgb(45, 71, 57);
+  overflow: hidden;
+}
+
+/* Free Tier */
+.pixelBorder .topCard .pricing {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: row;
+  gap: 105px;
+  align-items: flex-start;
+}
+
+.pixelBorder .topCard .pricing .priceInfo {
+  margin-left: 8px;
+}
+
+.pixelBorder .topCard .priceIMG img {
+  transform: translateY(7px);
+  width: 65px;
+  height: 65px;
+  margin: 0 -50px 0 0;
+  flex-shrink: 0;
+}
+
+.pixelBorder .topCard .pricing .tier {
+  color: rgb(148, 163, 184);
+  font-family: Mulish, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#freeTier {
+  font-family: Mulish, sans-serif;
+  color: rgb(148, 163, 184);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.pixelBorder .topCard .pricing .courseCardTitle {
+  color: rgb(255, 255, 255);
+  font-family: 'PixelGridM';
+  font-size: 18px;
+  font-weight: 700;
+  margin: -5px 0px 5px 0px;
+}
+
+.pixelBorder .topCard .pricingDesc {
+  margin-top: 0;
+  margin-left: 25px;
+  margin-right: 20px;
+  color: rgb(203, 213, 225);
+  font-family: Mulish, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.pixelBTN {
+  position: relative;
+  display: block;
+  width: 500px;
+  cursor: pointer;
+  user-select: none;
+  transform-style: preserve-3d;
+  overflow: visible;
+  margin: 5px auto 20px auto;
+}
+
+.pixelBTN span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pixelBTN .before {
+  height: calc(100% - 4px);
+  background: var(--getStartedBTN-Main);
+  border-image: var(--getStartedBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 1;
+  transition: transform 0.1s, background 0.1s;
+}
+
+.pixelBTN .btn-content {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-family: 'PixelGridS', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-shadow: var(--getStartedBTN-Press) 0px 2px 0px;
+  padding: 12px 75px 17px 75px;
+  transition: transform 0.1s;
+  text-align: center;
+}
+
+.pixelBTN .after {
+  height: calc(100% - 6px);
+  top: 6px;
+  background: var(--getStartedBTN-Shadow);
+  border-image: var(--getStartedBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 0;
+}
+
+.pixelBTN:hover .before {
+  background: rgb(55, 81, 67);
+}
+
+.pixelBTN:active .before {
+  background: var(--getStartedBTN-Press);
+}
+
+.pixelBorder .topCard .courseCardDifficulty {
+  margin: -10px 0px 10px -10px;
+  padding: 0px 18px;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.pixelBorder .topCard .courseCardDifficulty .difficultyTab {
+  display: flex;
+  height: 25px;
+  padding: 5px 12px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+
+.pixelBorder .topCard .courseCardDifficulty .difficultyTab p {
+  color: #E9C46A;
+  font-family: Mulish, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Paid */
+.paidPixelBorder {
+  border-image: var(--paidTierDiv-Border);
+  border-style: solid;
+  border-width: 0px;
+  position: relative;
+  clip-path: polygon(
+    6px 0px, 6px 2px, 4px 2px, 4px 4px, 2px 4px, 2px 6px, 
+    0px 6px, 0px 8px, 0px calc(100% - 6px), 2px calc(100% - 6px), 
+    2px calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 2px), 
+    6px calc(100% - 2px), 6px calc(100% + 0px), 8px calc(100% + 0px), 
+    calc(100% - 6px) calc(100% + 0px), calc(100% - 6px) calc(100% - 2px), 
+    calc(100% - 4px) calc(100% - 2px), calc(100% - 4px) calc(100% - 4px), 
+    calc(100% - 2px) calc(100% - 4px), calc(100% - 2px) calc(100% - 6px), 
+    calc(100% + 0px) calc(100% - 6px), calc(100% + 0px) calc(100% - 8px), 
+    calc(100% + 0px) 6px, calc(100% - 2px) 6px, calc(100% - 2px) 4px, 
+    calc(100% - 4px) 4px, calc(100% - 4px) 2px, calc(100% - 6px) 2px, 
+    calc(100% - 6px) 0px, calc(100% - 8px) 0px
+  );
+  box-shadow: rgb(253, 224, 71) 0px 0px 35px 0px;
+}
+
+.paidPixelBorder .topCard {
+  height: 304px;
+  background-color: rgb(45, 71, 57);
+  overflow: hidden;
+}
+
+.paidPixelBorder .topCard .pricingPaid {
+  padding: 16px 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 105px;
+  align-items: flex-start;
+} 
+
+.paidPixelBorder .topCard .paidPriceIMG img {
+  transform: translate(-44px, 7px);
+  width: 65px;
+  height: 65px;
+  margin: 0  -50px 0 0;
+  flex-shrink: 0;
+}
+
+.paidPixelBorder .topCard .pricingPaid .tierPaid .paid {
+  letter-spacing: 0.8px;
+  font-family: Mulish, sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  background: linear-gradient(
+    255deg,
+    rgb(163, 230, 53) 8%, 
+    rgb(44, 186, 255) 43%, 
+    rgb(190, 83, 255) 78%, 
+    rgb(255, 114, 134) 114%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#freeTier {
+  font-family: Mulish, sans-serif;
+  color: rgb(148, 163, 184);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.paidPixelBorder .topCard .pricingPaid .courseCardTitle {
+  color: rgb(255, 255, 255);
+  font-family: 'PixelGridM';
+  font-size: 18px;
+  font-weight: 700;
+  margin: -5px 0px 5px 0px;
+}
+
+.paidPixelBorder .topCard .pricingDesc {
+  margin-top: 0;
+  margin-left: 25px;
+  margin-right: 20px;
+  color: rgb(203, 213, 225);
+  font-family: Mulish, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.paidPixelBTN {
+  position: relative;
+  display: block;
+  width: 500px;
+  cursor: pointer;
+  user-select: none;
+  transform-style: preserve-3d;
+  overflow: visible;
+  margin: 5px auto 20px auto;
+}
+
+.paidPixelBTN span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.paidPixelBTN .before {
+  height: calc(100% - 4px);
+  background: var(--paidBTN-Main);
+  border-image: var(--paidBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 1;
+  transition: transform 0.1s, background 0.1s;
+}
+
+.paidPixelBTN .btn-content {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  color: #E9C46A;
+  font-family: 'PixelGridS', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-shadow: var(--paidBTN-Press) 0px 2px 0px;
+  padding: 12px 37px 17px 37px;
+  transition: transform 0.1s;
+  text-align: left;
+}
+
+.paidPixelBTN .after {
+  height: calc(100% - 6px);
+  top: 6px;
+  background: var(--paidBTN-Shadow);
+  border-image: var(--paidBTN-Border) 2 / 4px / 0px stretch;
+  border-style: solid;
+  border-width: 4px;
+  clip-path: polygon(4px 0px, 4px 2px, 2px 2px, 2px 4px, 0px 4px, 0px calc(100% - 4px), 2px calc(100% - 4px), 2px calc(100% - 2px), 4px calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, calc(100% - 4px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 4px), 100% calc(100% - 4px), 100% 4px, calc(100% - 2px) 4px, calc(100% - 2px) 2px, calc(100% - 4px) 2px, calc(100% - 4px) 0px);
+  z-index: 0;
+}
+
+.paidPixelBTN:hover .before {
+  background: rgb(235, 136, 111);
+}
+
+.paidPixelBTN:active .before {
+  transform: translateY(2px);
+  background: var(--paidBTN-Press);
+}
+
+.paidPixelBTN:active .btn-content {
+  transform: translateY(2px);
+}
+
+.paidPixelBorder .topCard .courseCardDifficulty {
+  margin: -10px 0px 10px -10px;
+  padding: 0px 18px;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.paidPixelBorder .topCard .courseCardDifficulty .difficultyTab {
+  display: flex;
+  height: 25px;
+  padding: 5px 12px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+
+.paidPixelBorder .topCard .courseCardDifficulty .difficultyTab p {
+  color: #E9C46A;
+  font-family: Mulish, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
